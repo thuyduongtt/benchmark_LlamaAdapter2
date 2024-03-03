@@ -31,7 +31,7 @@ def vqa_task(image, row_data):
     img = Image.open(image).convert('RGB')
     img = preprocess(img).unsqueeze(0).to(device)
 
-    prompt = llama.format_prompt(row_data['question'])
+    prompt = llama.format_prompt(f"Question: {row_data['question']} Answer:")
     return model.generate(img, [prompt])[0]
 
 

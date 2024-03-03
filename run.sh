@@ -4,12 +4,12 @@ case $1 in
   1)
     DS_NAME="unbalanced"
     MODEL_NAME="LORA-BIAS-7B-v21"
-    LLAMA_TYPE="7B"
+    LLAMA_TYPE="llama-2-7b"
     ;;
   2)
     DS_NAME="balanced_10"
     MODEL_NAME="LORA-BIAS-7B-v21"
-    LLAMA_TYPE="7B"
+    LLAMA_TYPE="llama-2-7b"
     ;;
 esac
 

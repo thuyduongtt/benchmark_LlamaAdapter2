@@ -9,7 +9,7 @@ from pipeline import run_pipeline_by_question
 llama_model = None
 MODEL_NAME = ''
 LLAMA_TYPE = ''
-LLAMA_DIR = '../Llama/'
+LLAMA_DIR = ''
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 

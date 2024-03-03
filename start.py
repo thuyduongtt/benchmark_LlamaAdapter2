@@ -37,6 +37,7 @@ def vqa_task(image, row_data):
 
 
 def test_pipeline():
+    print('===== TEST PIPELINE =====')
     img = 'img/eiffel.jpg'
     row_data = {
         'question': 'How high is this tower?'

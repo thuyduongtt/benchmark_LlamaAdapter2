@@ -34,7 +34,7 @@ module load conda
 # cd ~/
  
 # Perform experiments
-source activate lavis
+source activate llama_adapter
 ./run.sh $LSB_JOBINDEX
 
 

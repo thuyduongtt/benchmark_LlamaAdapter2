@@ -36,6 +36,15 @@ def vqa_task(image, row_data):
     return model.generate(img, [prompt])[0]
 
 
+def test_pipeline():
+    img = 'img/eiffel.jpg'
+    row_data = {
+        'question': 'How high is this tower?'
+    }
+    r = vqa_task(img, row_data)
+    print(f'{img}, {row_data["question"]}, {r}')
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--path_to_ds', type=str, required=True, help='Path to dataset')
@@ -51,8 +60,10 @@ def main():
     MODEL_NAME = args.model_name
     LLAMA_TYPE = args.llama_type
 
-    run_pipeline_by_question(vqa_task, args.path_to_ds, args.output_dir_name, limit=args.limit,
-                             start_at=args.start_at, split=args.split)
+    test_pipeline()
+
+    # run_pipeline_by_question(vqa_task, args.path_to_ds, args.output_dir_name, limit=args.limit,
+    #                          start_at=args.start_at, split=args.split)
 
 
 if __name__ == '__main__':

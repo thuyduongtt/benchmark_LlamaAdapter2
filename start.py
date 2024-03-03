@@ -36,7 +36,7 @@ def vqa_task(image, row_data):
     return model.generate(img, [prompt])[0]
 
 
-def test_pipeline():
+def test_model():
     from pathlib import Path
 
     print('===== TEST PIPELINE =====')
@@ -64,7 +64,7 @@ def main():
     MODEL_NAME = args.model_name
     LLAMA_TYPE = args.llama_type
 
-    test_pipeline()
+    test_model()
 
     # run_pipeline_by_question(vqa_task, args.path_to_ds, args.output_dir_name, limit=args.limit,
     #                          start_at=args.start_at, split=args.split)

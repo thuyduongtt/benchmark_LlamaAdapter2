@@ -2,7 +2,6 @@ import argparse
 
 import torch
 from PIL import Image
-import cv2
 import llama
 
 from pipeline import run_pipeline_by_question

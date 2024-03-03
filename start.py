@@ -10,7 +10,7 @@ from pipeline import run_pipeline_by_question, run_pipeline_by_image
 llama_model = None
 MODEL_NAME = ''
 LLAMA_TYPE = ''
-LLAMA_DIR = '../Llama/llama-2-7b'
+LLAMA_DIR = '../Llama/'
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 

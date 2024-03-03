@@ -39,7 +39,7 @@ def test_model():
     from pathlib import Path
 
     print('===== TEST PIPELINE =====')
-    img = './img/eiffel.jpg'
+    img = 'img/eiffel.jpg'
     assert Path(img).exists(), f'No image in {img}'
     row_data = {
         'question': 'How high is this tower?'

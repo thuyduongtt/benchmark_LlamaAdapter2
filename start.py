@@ -29,7 +29,7 @@ def vqa_task(image, row_data):
     model, preprocess = llama_model
     model.eval()
 
-    img = Image.fromarray(cv2.imread(image))
+    img = Image.open(image).convert('RGB')
     img = preprocess(img).unsqueeze(0).to(device)
 
     prompt = llama.format_prompt(row_data['question'])

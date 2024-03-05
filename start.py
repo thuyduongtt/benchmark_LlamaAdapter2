@@ -38,11 +38,11 @@ def vqa_task(image, row_data):
 def test_model():
     from pathlib import Path
 
-    print('===== TEST PIPELINE =====')
+    print('===== TEST MODEL =====')
     img = 'test_img/eiffel.jpg'
     assert Path(img).exists(), f'No image in {img}'
     row_data = {
-        'question': 'How high is this tower?'
+        'question': 'Please introduce this painting.'
     }
     r = vqa_task(img, row_data)
     print(f'{img}, {row_data["question"]}, {r}')

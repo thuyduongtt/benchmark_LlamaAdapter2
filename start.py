@@ -63,11 +63,10 @@ def main():
     MODEL_NAME = args.model_name
     LLAMA_TYPE = args.llama_type
 
-    test_model()
-
-    # run_pipeline_by_question(vqa_task, args.path_to_ds, args.output_dir_name, limit=args.limit,
-    #                          start_at=args.start_at, split=args.split)
+    run_pipeline_by_question(vqa_task, args.path_to_ds, args.output_dir_name, limit=args.limit,
+                             start_at=args.start_at, split=args.split)
 
 
 if __name__ == '__main__':
-    main()
+    # main()
+    test_model()

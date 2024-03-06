@@ -3,6 +3,7 @@ import argparse
 import torch
 from PIL import Image
 import llama
+import cv2
 
 from pipeline import run_pipeline_by_question
 
@@ -28,7 +29,7 @@ def vqa_task(image, row_data):
     model, preprocess = llama_model
     model.eval()
 
-    img = Image.open(image).convert('RGB')
+    img = Image.fromarray(cv2.imread(image))
     img = preprocess(img).unsqueeze(0).to(device)
 
     prompt = llama.format_prompt(f"Question: {row_data['question']} Answer:")
